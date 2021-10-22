@@ -12,7 +12,7 @@ var qs=require('querystring');
 let server=http.createServer(handleRequest);
 function handleRequest(req,res){
     var store='';
-    var dataFormat=req.headers['Content-Type'];
+    var dataFormat=req.headers['content-type'];
     req.on('data',(chunk)=>{
         store+=chunk;
     })
