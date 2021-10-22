@@ -17,7 +17,7 @@ function handleRequest(req,res){
         res.writeHead(202,{'content-type':'text/html'});
         var formData=fs.createReadStream('./form.html','utf-8').pipe(res);
        
-    }else if(req.method==='POST' && req.url=='/server.js'){
+    }else if(req.method==='POST' && req.url=='/form'){
         console.log('it is inside post method');
         var store='';
         req.on('data',(chunk)=>{
